@@ -1,3 +1,5 @@
 #!/usr/local/bin/node
+import {greeting, userGreeting} from '..';
 
-console.log('Welcome to the Brain Games!');
+greeting();
+userGreeting();
