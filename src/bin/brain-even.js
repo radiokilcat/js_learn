@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-import { greeting, userGreeting, cycle } from '..';
+import { greeting, userGreeting, gameCycle, getRandomInt, isEven } from '..';
 
 greeting();
 userGreeting();
-cycle(0);
+gameCycle(0, getRandomInt, isEven);
