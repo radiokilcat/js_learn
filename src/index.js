@@ -13,8 +13,10 @@ export const cycle = (count) => {
     console.log('Congratulations, Bill!');
     return 0;
   }
-  const getRandomArbitary = (min, max) => (Math.random() * (max - min)) + min;
-  const randomNumber = getRandomArbitary(1, 100);
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  const randomNumber = getRandomInt(1, 100);
   const answer1 = readlineSync.question(`Is ${randomNumber} is even number?`);
   const isEven = (num) => {
     if (num % 2 === 0) {

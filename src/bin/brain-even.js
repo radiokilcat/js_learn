@@ -1,4 +1,6 @@
-#!/usr/local/bin/node
-import cycle from '..';
+#!/usr/bin/env node
+import { greeting, userGreeting, cycle } from '..';
 
-cycle(1);
+greeting();
+userGreeting();
+cycle(0);
