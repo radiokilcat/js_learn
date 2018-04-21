@@ -1,6 +1,5 @@
-#!/usr/bin/env node
 import { cons } from 'hexlet-pairs';
-import { greeting, userGreeting, gameCycle, getRandomInt } from '..';
+import { getRandomInt } from '..';
 
 const quest = () => {
   const first = getRandomInt(1, 100);
@@ -20,6 +19,4 @@ const quest = () => {
   }
 };
 
-greeting();
-userGreeting();
-gameCycle(0, quest);
+export default quest;
