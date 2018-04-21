@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import customRandom from '../games/brain-even';
+
 import { greeting, userGreeting, gameCycle } from '..';
+import quest from '../games/brain-gcd';
 
 greeting();
 userGreeting();
-gameCycle(0, customRandom);
+gameCycle(0, quest);
