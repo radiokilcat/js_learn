@@ -1,3 +1,4 @@
+import { car, cdr } from 'hexlet-pairs';
 import readlineSync from 'readline-sync';
 
 
@@ -10,42 +11,10 @@ export const userGreeting = () => {
 
 export const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-export const randomOperation = (a, b) => {
-  const random = getRandomInt(1, 3);
-  let result = 0;
-  let log = '';
-  switch (random) {
-    case 1:
-      result = a + b;
-      log = 'a + b';
-      break;
-    case 2:
-      result = a - b;
-      log = 'a + b';
-      break;
-    case 3:
-      result = a * b;
-      log = 'a + b';
-      break;
-    default:
-      return 0;
-  }
-  return result;
-};
-
-
-export const isEven = (num) => {
-  if (num % 2 === 0) {
-    return 'yes';
-  }
-  return 'no';
-};
-
-
-
-export const gameCycle = (count, question, func) => {
-  const questionValue = question(1, 100);
-  const correctAnswer = func(questionValue);
+export const gameCycle = (count, question) => {
+  const questionPair = question();
+  const questionValue = car(questionPair);
+  const correctAnswer = cdr(questionPair);
 
   if (count === 3) {
     console.log('Congratulations, Bill!');
@@ -54,9 +23,9 @@ export const gameCycle = (count, question, func) => {
   const userAnswer = readlineSync.question(`Question: ${questionValue} `);
   if (userAnswer === correctAnswer) {
     console.log('Correct!');
-    return gameCycle(count + 1, question, func);
+    return gameCycle(count + 1, question);
   }
   console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.
   Let's try again, Bill!`);
-  return gameCycle(count, question, func);
+  return gameCycle(count, question);
 };

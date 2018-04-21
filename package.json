@@ -1,9 +1,10 @@
 {
   "name": "brain-games-is-all-you-need",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "",
   "main": "dist/index.js",
   "bin": {
+    "brain-calc": "dist/games/brain-calc.js",
     "brain-even": "dist/bin/brain-even.js",
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -32,6 +33,7 @@
     "eslint-plugin-jest": "^21.15.0"
   },
   "dependencies": {
+    "hexlet-pairs": "^1.0.5",
     "readline-sync": "^1.4.9"
   }
 }
