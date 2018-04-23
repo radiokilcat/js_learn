@@ -39,11 +39,15 @@ const quest = () => {
     const greatestIndex = numb => cdr(greatestDigit(numb));
     const smallestIndex = numb => cdr(smallestDigit(numb));
     for (let i = 0; i < num.length; i += 1) {
-      arrNum += num[i];
+      arrNum += String(num)[i];
+      console.log(i);
     }
+    console.log(arrNum);
+
     while (!isBalanced(num)) {
       arrNum[greatestIndex(num)] -= 1;
       arrNum[smallestIndex(num)] += 1;
+      console.log(arrNum);
     }
     return arrNum;
   };
