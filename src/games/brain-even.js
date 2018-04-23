@@ -10,7 +10,7 @@ const isEven = (num) => {
 
 const customRandom = () => {
   const rand = getRandomInt(1, 100);
-  if (isEven(rand) === true) {
+  if (isEven(rand)) {
     return cons(rand, 'yes');
   }
   return cons(rand, 'no');

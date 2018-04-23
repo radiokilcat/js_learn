@@ -3,4 +3,4 @@
 import { gameCycle } from '..';
 import quest from '../games/brain-calc';
 
-gameCycle(0, quest);
+gameCycle(quest);
