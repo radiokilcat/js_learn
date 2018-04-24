@@ -24,7 +24,7 @@ export const gameCycle = (quest) => {
       return 0;
     }
     const userAnswer = readlineSync.question(`Question: ${questionValue} `);
-    if (userAnswer === correctAnswer) {
+    if (userAnswer === String(correctAnswer)) {
       console.log('Correct!');
       return gameLogic(count + 1, question);
     }
